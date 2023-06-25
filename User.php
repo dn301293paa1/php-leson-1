@@ -4,7 +4,7 @@ class Transport {
     protected string $name;
     protected int $speed;
 
-    public function __construct($name, $speed) {
+    public function __construct(string  $name, int  $speed) {
         $this->name = $name;
         $this->speed = $speed;
     }
@@ -17,7 +17,7 @@ class Transport {
         return $this->speed;
     }
 
-    public function getInfo() {
+    public function getInfo() :string {
         return "This is a {$this->name} transport and its speed is {$this->speed} km/h";
     }
 }
@@ -25,16 +25,16 @@ class Transport {
 class Car extends Transport {
     private $numDoors;
 
-    public function __construct($name, $speed, $numDoors) {
+    public function __construct( string $name,  int $speed,int  $numDoors) {
         parent::__construct($name, $speed);
         $this->numDoors = $numDoors;
     }
 
-    public function startEngine() {
+    public function startEngine() : string  {
         return "The {$this->name} starts the engine";
     }
 
-    public function getNumDoors() {
+    public function getNumDoors()  : int {
         return $this->numDoors;
     }
 
@@ -46,7 +46,7 @@ class Car extends Transport {
 class Bicycle extends Transport {
     private int $numGears;
 
-    public function __construct($name, $speed, $numGears) {
+    public function __construct(string  $name, int  $speed,  int $numGears) {
         parent::__construct($name, $speed);
         $this->numGears = $numGears;
     }
@@ -59,7 +59,7 @@ class Bicycle extends Transport {
         $this->numGears = $numGears;
     }
 
-    public function ringBell() {
+    public function ringBell()  : string {
         return 'We hear the sound of a bicycle';
     }
 }
@@ -67,7 +67,7 @@ class Bicycle extends Transport {
 class Boat extends Transport {
     private string $typeBoat;
 
-    public function __construct($name, $speed, $typeBoat) {
+    public function __construct( string $name,  int $speed,  string $typeBoat) {
         parent::__construct($name, $speed);
         $this->typeBoat = $typeBoat;
     }
@@ -80,7 +80,7 @@ class Boat extends Transport {
         $this->typeBoat = $typeBoat;
     }
 
-    public function help() {
+    public function help() : string {
         return "The {$this->name} calls SOS SOS SOS";
     }
 }
@@ -98,6 +98,4 @@ $vw = new Car('t-roc', 160, 5);
 $transport = [$boat1, $bmx, $vw];
 
 printTransportInfo($transport);
-
-
 
