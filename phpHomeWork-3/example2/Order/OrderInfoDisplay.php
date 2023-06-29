@@ -4,7 +4,7 @@ class OrderInfoDisplay
 {
     public function displayOrderInfo($orderId)
     {
-        echo "order {$orderId}";
+        echo "order {$orderId}" . PHP_EOL;
     }
 }
 
