@@ -1,0 +1,7 @@
+{
+    "name": "andrii",
+    "age": "29",
+    "gender": "m",
+    "city": "Dnipro",
+    "phone": "38063000000"
+}
