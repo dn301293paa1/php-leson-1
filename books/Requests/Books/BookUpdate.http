@@ -1,0 +1,10 @@
+PATCH http://php-pro.loc/api/books/8
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "qwert",
+    "year": 2012,
+    "lang": "ua",
+    "pages": 123
+}
