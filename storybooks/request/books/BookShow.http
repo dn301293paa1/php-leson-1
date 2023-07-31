@@ -1,0 +1,4 @@
+
+GET http://php-pro.loc/api/books/3
+Content-Type: application/json
+Accept: application/json

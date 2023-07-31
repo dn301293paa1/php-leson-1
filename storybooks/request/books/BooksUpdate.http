@@ -1,0 +1,10 @@
+PATCH http://php-pro.loc/api/books/3
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "Марк",
+    "year": 1995,
+    "lang": "de",
+    "pages": 200
+}

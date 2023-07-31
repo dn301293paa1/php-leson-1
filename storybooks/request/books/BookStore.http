@@ -1,0 +1,10 @@
+POST http://php-pro.loc/api/books
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "zxcvcc",
+    "year": 1990,
+    "lang": "ua",
+    "pages": 555
+}
