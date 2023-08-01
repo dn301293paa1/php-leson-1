@@ -78,7 +78,7 @@ class BookController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(BookDestroyRequest $request): Response
+    public function destroy(BookDestroyRequest $request): \Illuminate\Http\Response
     {
         $validatedData = $request->validated();
         $service = $this->booksService->destroy($validatedData['id']);
