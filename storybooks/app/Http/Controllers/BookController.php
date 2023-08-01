@@ -66,7 +66,7 @@ class BookController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(BookUpdateRequest $request)
+    public function update(BookUpdateRequest $request): JsonResponse
     {
         $dto = new BookUpdateDTO(... $request->validated());
         $service = $this->booksService->update($dto);
@@ -78,7 +78,7 @@ class BookController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(BookDestroyRequest $request)
+    public function destroy(BookDestroyRequest $request): Response
     {
         $validatedData = $request->validated();
         $service = $this->booksService->destroy($validatedData['id']);
